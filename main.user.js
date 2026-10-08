@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SpeckMichs Die Stämme Tool Collection
 // @namespace    https://github.com/SvenMarvin
-// @version      3.4.1
+// @version      3.4.2
 // @description  Erweitert die Die Stämme Erfahrung mit einigen Tools und Skripten
 // @author       SpeckMich
 // @connect      raw.githubusercontent.com
@@ -650,16 +650,9 @@
     // 3) Place
     if (ctx.screen === "place") {
       const urls = toArray(MODULES.place);
-      const scoped =
-        ctx.mode !== "call"
-          ? urls.filter((u) => {
-              const s = typeof u === "string" ? u : u?.url;
-              return !/\/massSupporter\.js(\?|$)/.test(s || "");
-            })
-          : urls;
 
       return [
-        ...(await filterAndExtract("place", scoped)),
+        ...(await filterAndExtract("place", urls)),
         ...(await getGlobalUrls()),
       ];
     }

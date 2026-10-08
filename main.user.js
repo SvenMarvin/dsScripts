@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SpeckMichs Die Stämme Tool Collection
-// @namespace    https://github.com/EmoteBot6
-// @version      3.4.0
+// @namespace    https://github.com/SvenMarvin
+// @version      3.4.1
 // @description  Erweitert die Die Stämme Erfahrung mit einigen Tools und Skripten
 // @author       SpeckMich
 // @connect      raw.githubusercontent.com
@@ -12,8 +12,8 @@
 // @match        https://*ds-ultimate.de/tools/attackPlanner/*
 // @match        https://twforge.net/worlds/*/planner/plans/*
 // @icon         https://pbs.twimg.com/profile_images/1456997417807716357/oX-R0v9l_400x400.png
-// @updateURL    https://raw.githubusercontent.com/EmoteBot6/DieStaemmeScripts/master/main.user.js
-// @downloadURL  https://raw.githubusercontent.com/EmoteBot6/DieStaemmeScripts/master/main.user.js
+// @updateURL    https://raw.githubusercontent.com/SvenMarvin/dsScripts/master/main.user.js
+// @downloadURL  https://raw.githubusercontent.com/SvenMarvin/dsScripts/master/main.user.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM.setValue
 // @grant        GM.getValue
@@ -391,7 +391,7 @@
   const ENV_KEY = "dsToolsEnv";
   const DEFAULT_ENV = "prod";
   const MANIFEST_URLS = {
-    prod: "https://raw.githubusercontent.com/EmoteBot6/DieStaemmeScripts/master/config/manifest.prod.json",
+    prod: "https://raw.githubusercontent.com/SvenMarvin/dsScripts/master/config/manifest.prod.json",
     dev: "http://localhost:8123/config/manifest.dev.json",
   };
 
@@ -1022,7 +1022,7 @@
                        type="text"
                        class="vis input"
                        style="width:100%;"
-                       value="${window.DS_USER_SETTINGS.incWebhookURL || ""}">
+                       value="${String(window.DS_USER_SETTINGS.incWebhookURL || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;")}">
             </td>
         </tr>
     </table>

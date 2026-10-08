@@ -120,11 +120,6 @@
   // ---------------------------
   async function main() {
     initializationTheme();
-    try {
-      await $.getScript("https://dl.dropboxusercontent.com/s/i5c0so9hwsizogm/styleCSSGlobal.js?dl=0");
-    } catch (e) {
-      console.warn("[MassSupporter] styleCSSGlobal laden fehlgeschlagen:", e);
-    }
     createMainInterface();
     addEvents();
   }

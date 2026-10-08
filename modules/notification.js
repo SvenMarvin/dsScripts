@@ -43,15 +43,15 @@
     links: [
       {
         label: "GitHub",
-        href: "https://github.com/EmoteBot6/DieStaemmeScripts",
+        href: "https://github.com/SvenMarvin/dsScripts",
       },
       {
         label: "Pull Requests",
-        href: "https://github.com/EmoteBot6/DieStaemmeScripts/pulls",
+        href: "https://github.com/SvenMarvin/dsScripts/pulls",
       },
       {
         label: "Issues",
-        href: "https://github.com/EmoteBot6/DieStaemmeScripts/issues",
+        href: "https://github.com/SvenMarvin/dsScripts/issues",
       },
     ],
     supportLink: "https://buymeacoffee.com/emotebot",
